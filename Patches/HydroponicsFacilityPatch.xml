@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="AutoHydroponic" or defName="SmallAutoHydroponic" or defName="TinyAutoHydroponic"]/comps</xpath>
+    <value>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>AutoHydro_FertilizerInjector</li>
+          <li>AutoHydro_AIOptimizer</li>
+          <li>AutoHydro_YieldOverclocker</li>
+        </linkableFacilities>
+      </li>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>AutoHydro_LinkedEnhancements</defName>
+    <label>automatic hydroponics enhancements</label>
+    <description>Unlocks advanced linkable modules for automatic hydroponics: fertilizer injector, AI optimizer, and yield overclocker.</description>
+    <baseCost>1200</baseCost>
+    <prerequisites>
+      <li>Fabrication</li>
+      <li>Hydroponics</li>
+    </prerequisites>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>9</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+</Defs>
+

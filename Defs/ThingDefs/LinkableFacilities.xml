@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Fertilizer Injector: powered, short range, small boost, components heavier -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AutoHydro_FertilizerInjector</defName>
+    <label>fertilizer injector</label>
+    <description>Links to automatic hydroponics to inject fertilizer, modestly accelerating processing speed.</description>
+    <graphicData>
+      <texPath>FertilizerInjector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <thingClass>Building</thingClass>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Beauty>0</Beauty>
+      <WorkToBuild>900</WorkToBuild>
+      <Mass>45</Mass>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Facility">
+        <compClass>CompFacility</compClass>
+        <linkableBuildings>
+          <li>AutoHydroponic</li>
+          <li>SmallAutoHydroponic</li>
+          <li>TinyAutoHydroponic</li>
+        </linkableBuildings>
+        <maxSimultaneous>2</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AutomaticHydroponicsLinkables.FacilitySpeedBoostExtension">
+        <tickFactorPerLink>0.15</tickFactorPerLink>
+        <maxLinks>2</maxLinks>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>AutoHydro_LinkedEnhancements</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>60</pathCost>
+  </ThingDef>
+
+  <!-- Hydroponic AI Optimizer: 2x2, high draw, single link, stronger boost, advanced costs -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AutoHydro_AIOptimizer</defName>
+    <label>hydroponic AI optimizer</label>
+    <description>An AI controller that optimizes hydroponic processing. Powerful but energy-hungry.</description>
+    <graphicData>
+      <texPath>AIOptimizer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <thingClass>Building</thingClass>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>0.3</Flammability>
+      <Beauty>0</Beauty>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>80</Mass>
+    </statBases>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>600</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Facility">
+        <compClass>CompFacility</compClass>
+        <linkableBuildings>
+          <li>AutoHydroponic</li>
+          <li>SmallAutoHydroponic</li>
+          <li>TinyAutoHydroponic</li>
+        </linkableBuildings>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AutomaticHydroponicsLinkables.FacilitySpeedBoostExtension">
+        <tickFactorPerLink>0.25</tickFactorPerLink>
+        <maxLinks>1</maxLinks>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>AutoHydro_LinkedEnhancements</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>60</pathCost>
+  </ThingDef>
+
+  <!-- Yield Doubler: doubles yield but slows process by 1.5x -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>AutoHydro_YieldOverclocker</defName>
+    <label>hydroponic yield overclocker</label>
+    <description>Overclocks output protocols to double yield at the cost of slower processing.</description>
+    <graphicData>
+      <texPath>YieldOverclocker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <thingClass>Building</thingClass>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0.4</Flammability>
+      <Beauty>0</Beauty>
+      <WorkToBuild>1200</WorkToBuild>
+      <Mass>50</Mass>
+    </statBases>
+    <costList>
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>200</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Facility">
+        <compClass>CompFacility</compClass>
+        <linkableBuildings>
+          <li>AutoHydroponic</li>
+          <li>SmallAutoHydroponic</li>
+          <li>TinyAutoHydroponic</li>
+        </linkableBuildings>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="AutomaticHydroponicsLinkables.FacilitySpeedBoostExtension">
+        <tickFactorPerLink>-0.3333333</tickFactorPerLink>
+        <yieldMultPerLink>2.0</yieldMultPerLink>
+        <maxLinks>1</maxLinks>
+      </li>
+    </modExtensions>
+    <researchPrerequisites>
+      <li>AutoHydro_LinkedEnhancements</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>60</pathCost>
+  </ThingDef>
+</Defs>

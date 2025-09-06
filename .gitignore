@@ -1,0 +1,10 @@
+/.vscode/obj
+/*.sln 
+
+/Assemblies
+/*/Assemblies
+/*/Assemblies/*.pdb
+/.vscode
+/dist
+/Source/obj
+/Source/bin

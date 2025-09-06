@@ -1,0 +1,3 @@
+login averrinthemelas
+workshop_build_item "C:\Users\o\Documents\GitHub\AutomaticHydroponicsLinkables\workshop.vdf"
+quit
