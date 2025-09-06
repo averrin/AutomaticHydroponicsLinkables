@@ -90,8 +90,8 @@ Each facility can define in XML (via DefModExtension):
 
 ## 🔗 Links
 
-- Steam Workshop: (to be added)
-- GitHub: (to be added)
+- Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3562533352
+- GitHub: https://github.com/averrin/AutomaticHydroponicsLinkables
 
 ---
 
