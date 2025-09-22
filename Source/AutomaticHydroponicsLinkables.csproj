@@ -33,21 +33,28 @@
     </Reference>
   </ItemGroup>
   <PropertyGroup>
-    <RimWorldManaged>D:\Games\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed</RimWorldManaged>
+    <!-- Defaults; can be overridden via MSBuild properties for portability -->
+    <RimWorldManaged Condition="'$(RimWorldManaged)' == ''">C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed</RimWorldManaged>
+    <WorkshopContent Condition="'$(WorkshopContent)' == ''">C:\Program Files (x86)\Steam\steamapps\workshop\content</WorkshopContent>
+    <WorkshopAppId Condition="'$(WorkshopAppId)' == ''">294100</WorkshopAppId>
     <ModRoot>$(MSBuildThisFileDirectory)..\</ModRoot>
     <OutDir>$(ModRoot)Assemblies\</OutDir>
+    <!-- Workshop item IDs for dependencies (override if different) -->
+    <VEFWorkshopId Condition="'$(VEFWorkshopId)' == ''">2023507013</VEFWorkshopId>
+    <HarmonyWorkshopId Condition="'$(HarmonyWorkshopId)' == ''">1414302321</HarmonyWorkshopId>
+    <PipeSystemWorkshopId Condition="'$(PipeSystemWorkshopId)' == ''">2023507013</PipeSystemWorkshopId>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="VEF">
-      <HintPath>D:\Games\SteamLibrary\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <HintPath>$(WorkshopContent)\$(WorkshopAppId)\$(VEFWorkshopId)\1.6\Assemblies\VEF.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PipeSystem">
-      <HintPath>D:\Games\SteamLibrary\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\PipeSystem.dll</HintPath>
+      <HintPath>$(WorkshopContent)\$(WorkshopAppId)\$(PipeSystemWorkshopId)\1.6\Assemblies\PipeSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>D:\Games\SteamLibrary\steamapps\common\RimWorld\Mods\1414302321\1.6\Assemblies\0Harmony.dll</HintPath>
+      <HintPath>$(WorkshopContent)\$(WorkshopAppId)\$(HarmonyWorkshopId)\1.6\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

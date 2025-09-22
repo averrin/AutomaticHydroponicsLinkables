@@ -1,9 +1,79 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ModMetaData>
   <name>Automatic Hydroponics Linkables</name>
   <author>Averrin</author>
   <packageId>AutomaticHydroponics.Linkables</packageId>
-  <description>Adds linkable facilities that boost Automatic Hydroponics processing speed.</description>
+  <description>Automatic Hydroponics Linkables adds new powered facilities that link to Automatic Hydroponics and modify processing speed and yield. Effects are data-driven and shown directly in the processing UI and menus.
+
+Features
+- Fertilizer Injector: modest speed boost, low power, adjacent placement
+- Hydroponic AI Optimizer: stronger speed boost, higher power, adjacent, 2x2
+- Yield Overclocker: doubles yield while making processes ~1.5x slower
+- Effective time and (if applicable) yield multiplier displayed in process list and options menu
+- Data-driven tuning per facility via modExtensions
+- Locked behind a single research after Fabrication + Hydroponics
+
+New facilities
+- Fertilizer Injector
+  - Power: low
+  - Placement: adjacent
+  - Effect: small speed increase per linked injector (capped)
+- Hydroponic AI Optimizer
+  - Power: high; 2x2
+  - Placement: adjacent; single link
+  - Effect: notable speed increase
+- Hydroponic Yield Overclocker
+  - Power: moderate
+  - Placement: adjacent; single link
+  - Effect: 2x yield; ~1.5x slower processing
+
+Research
+- Automatic Hydroponics Enhancements (after Fabrication + Hydroponics)
+  - Unlocks all three facilities
+
+Requirements
+- Automatic Hydroponics (parent mod)
+- Vanilla Expanded Framework
+
+Warning:
+1. This mod uses ugly AI-generated sprites, because I cannot draw, like at all. If you have images that I can use here, please share.
+2. This mod is in Beta and not tesxted enough.
+3. It patches some VEF internals, so it can cause incompatibilities with other mods that use VEF PipeSystem/Processes.Automatic Hydroponics Linkables adds new powered facilities that link to Automatic Hydroponics and modify processing speed and yield. Effects are data-driven and shown directly in the processing UI and menus.
+
+Features
+- Fertilizer Injector: modest speed boost, low power, adjacent placement
+- Hydroponic AI Optimizer: stronger speed boost, higher power, adjacent, 2x2
+- Yield Overclocker: doubles yield while making processes ~1.5x slower
+- Effective time and (if applicable) yield multiplier displayed in process list and options menu
+- Data-driven tuning per facility via modExtensions
+- Locked behind a single research after Fabrication + Hydroponics
+
+New facilities
+- Fertilizer Injector
+  - Power: low
+  - Placement: adjacent
+  - Effect: small speed increase per linked injector (capped)
+- Hydroponic AI Optimizer
+  - Power: high; 2x2
+  - Placement: adjacent; single link
+  - Effect: notable speed increase
+- Hydroponic Yield Overclocker
+  - Power: moderate
+  - Placement: adjacent; single link
+  - Effect: 2x yield; ~1.5x slower processing
+
+Research
+- Automatic Hydroponics Enhancements (after Fabrication + Hydroponics)
+  - Unlocks all three facilities
+
+Requirements
+- Automatic Hydroponics (parent mod)
+- Vanilla Expanded Framework
+
+Warning:
+1. This mod uses ugly AI-generated sprites, because I cannot draw, like at all. If you have images that I can use here, please share.
+2. This mod is in Beta and not tesxted enough.
+3. It patches some VEF internals, so it can cause incompatibilities with other mods that use VEF PipeSystem/Processes.</description>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>

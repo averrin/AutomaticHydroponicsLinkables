@@ -40,7 +40,7 @@
         <linkableBuildings>
           <li>AutoHydroponic</li>
           <li>SmallAutoHydroponic</li>
-          <li>TinyAutoHydroponic</li>
+          <li MayRequire="AutomaticHydroponics.Expanded">TinyAutoHydroponic</li>
         </linkableBuildings>
         <maxSimultaneous>2</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -107,7 +107,7 @@
         <linkableBuildings>
           <li>AutoHydroponic</li>
           <li>SmallAutoHydroponic</li>
-          <li>TinyAutoHydroponic</li>
+          <li MayRequire="AutomaticHydroponics.Expanded">TinyAutoHydroponic</li>
         </linkableBuildings>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
@@ -174,7 +174,7 @@
         <linkableBuildings>
           <li>AutoHydroponic</li>
           <li>SmallAutoHydroponic</li>
-          <li>TinyAutoHydroponic</li>
+          <li MayRequire="AutomaticHydroponics.Expanded">TinyAutoHydroponic</li>
         </linkableBuildings>
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacent>true</mustBePlacedAdjacent>

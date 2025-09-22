@@ -1,5 +1,6 @@
 /.vscode/obj
-/*.sln 
+/*.sln
+*.code-workspace
 
 /Assemblies
 /*/Assemblies
